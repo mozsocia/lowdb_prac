@@ -29,13 +29,15 @@ let result = db.get('posts')
 console.log(result);
 
 
-
+// remove a post
 let result = db.get('posts')
   .remove({ id: 1 })
   .value()
 console.log(db.getState());
 
 
+
+// update a post
 db.get('posts')
   .find({ id: 2 })
   .assign({ title: 'hi!' })
