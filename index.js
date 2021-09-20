@@ -11,7 +11,7 @@ db.defaults({ posts: [], user: {}, count: 0 })
 
 // to add 
 db.get('posts')
-  .insert({ id: 4, title: 'lowdb is awesome' })
+  .push({ id: 4, title: 'lowdb is awesome' })
   .write()
 
 // to see the whole database
