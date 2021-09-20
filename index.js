@@ -27,12 +27,14 @@ let result = db.get('posts')
   .find({ id: 1 })
   .value()
 console.log(result);
+console.log(result ? result.title : " not found");
 
 
 // remove a post
 let result = db.get('posts')
   .remove({ id: 1 })
-  .value()
+  .value() //  .write() to write file
+
 console.log(db.getState());
 
 
